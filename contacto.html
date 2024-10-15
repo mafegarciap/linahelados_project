@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <div>
+                <a href="index.html" class="img_logo"><img src="img/logo_lina.png" alt="logo helados Lina" width="100"></a>
+            </div>
+            
+            <!-- Puede hacerse que se coloquen el nav dentro del header -->
+            <div>
+                <nav>
+                    <ul class="nav_principal">
+                        <li class="ul_navppl"><a href="index.html">INICIO</a></li>
+                        <li class="ul_navppl"><a href="quienes.html">QUIENES</a></li>
+                        <li class="ul_navppl"><a href="contacto.html">CONTACTO</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <h1>CONTACTO</h1>
+    </header>
+
+
+    <main>
+        <p>¡Tienes alguna cosulta o reclamo? Dejanos tus datos en el siguiente formulario y te contactaremos a la brevedad posible:</p>
+        
+        <form id="form_contacto" action="colecta.html">
+            <!-- colecta es el archivo a donde estoy enviando los datos -->
+
+            <!-- componente -->
+
+            
+            <input id="datos" type="text" placeholder="nombre completo"> 
+
+            <input id="datos" type="text"placeholder="apellidos" maxlength="40"> 
+            
+            <!-- si quiero deshabilitar un input uso el atributo disable -->
+             <!-- <label for="">Telefono</label> <br>  -->
+            <input id="datos" type="text" placeholder="telefono"> 
+            
+            <input id="datos" type="email" placeholder="correo"> 
+
+            <div>
+                <label for="">Tipo de solicitud</label>
+            <select name="" id="">
+                
+                <option value="reclamo">Reclamo</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="consulta">Consulta</option>
+
+            </select>
+            </div>
+           <div>
+                <input id="botones" type="submit" value="Enviar">
+                <input id="botones" type="reset" value="Borrar">
+            </div>
+            
+
+
+        </form>
+        
+    </main>
+    <footer>
+        <p>Lina Helados - Marca registrada</p>
+    <a href="contacto.html">Contáctanos</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+
+    <!-- la siguiente linea siempre debe ir en el head -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CONTACTO</h1>
+    </header>
+
+    <nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li>QUIENES</li>
+                <li><a href="contacto.html">CONTACTO</a>
+                </li>
+    
+            </ul>
+        </nav>
+    </nav>
+
+
+    <main>
+
+        <h2>Formulario</h2>
+        <!-- formularios -->
+
+        <div class="cajas"> caja 1</div>
+        <div class="cajas"> caja 2</div>
+        <div class="cajas"> caja 3</div>
+        <div class="cajas"> caja 4</div>
+
+        <form action="colecta.html">
+            <!-- colecta es el archivo a donde estoy enviando los datos -->
+
+            <!-- componente -->
+
+            
+            <input type="text" placeholder="nombre"> <br> <br>
+
+            <input type="text"placeholder="apellido" maxlength="20"> <br> <br>
+
+            <!-- para setear por defecto un valor uso value -->
+            <!-- <input type="text" placeholder="equipo" value="River"> <br> -->
+            <input type="text" placeholder="equipo"> <br>
+            
+            <!-- si quiero deshabilitar un input uso el atributo disable -->
+            <input type="text" placeholder="telefono" disabled> <br>
+            <input type="number" placeholder="comuna" min="0" max="15"> <br>
+
+
+            <!-- <label for="">Telefono</label> <br>  -->
+            <input type="email" placeholder="correo"> <br>
+            <input type="password" placeholder="password"> <br> <br>
+
+            <input type="range">
+            <input type="color">
+            <input type="date" placeholder="dd/mm/aaaa"> <br>
+
+
+            <label for="">Color favorito</label>
+            <select name="" id="">
+                
+                <option value="rojo">Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+
+            </select> <br> <br>
+
+            <h2 id="segundo2">Comida favorita</h2>
+
+            <input type="checkbox" name="comidas"> pizza
+            <input type="checkbox" name="comidas"> arepa
+            <input type="checkbox" name="comidas"> pasta
+            <input type="checkbox" name="comidas"> asado
+            <input type="checkbox" name="comidas"> milanesas
+
+            <h2>Postres favoritos</h2>
+
+            <input type="radio" name="postres"> helado
+            <input type="radio" name="postres"> torta
+            <input type="radio" name="postres"> cheesecake
+            <input type="radio" name="postres"> flan
+            <input type="radio" name="postres"> ensalada de frutas
+
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+
+
+        </form>
+        
+    </main>
+</body>
+</html>
