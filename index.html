@@ -68,43 +68,60 @@
                 <label for="">
                     <input type="hidden" name="mostrador" value="mostrador">
                     <input type="image" src="img/mostrador_heladeria.jpg" alt="mesas_heladeria">
-                <h3>Mostrador</h3>
+                    <h3>Mostrador</h3>
                 </label>
             </form>
         </section>
         <section class="caracteristicas_helado">
            
-            <h2>¿Qué helado pedirás hoy? 🍧</h2>
-
+            <h2>¿Qué pedirás hoy? 🍧</h2>
              
-        <form action="colecta.html">
-            <!-- colecta es el archivo a donde estoy enviando los datos -->
+            <form action="colecta.html">
+                <!-- colecta es el archivo a donde estoy enviando los datos -->
 
-            <!-- componente -->
+                <!-- componente -->
+                <div id="opciones_pedido">
+                    <label>
+                        <input type="hidden" name="milkshake" value="milkshake">
+                        <input type="image" src="img/milkshake_full.jpg" alt="milkshake">
+                        <h3>milkshake</h3>
+                    </label>
+                    <label for="">
+                        <input type="hidden" name="conoSencillo" value="conoSencillo">
+                        <input type="image" src="img/icecream_single.jpg" alt="conoSencillo">
+                        <h3>cono sencillo</h3>
+                    </label>
+                    <label for="">
+                        <input type="hidden" name="conoDoble" value="conoDoble">
+                        <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <h3>cono doble</h3>
+                    </label>
+                </div> 
+                
 
-            <h3>Sabor del helado</h3>
+                <h3>Sabor del helado</h3>
 
-            <input type="checkbox" name="sabores"> chocolate con almendra
-            <input type="checkbox" name="sabores"> vainilla
-            <input type="checkbox" name="sabores"> frutilla
-            <input type="checkbox" name="sabores"> dulce de leche
-            <input type="checkbox" name="sabores"> Maracuyá
+                <input type="checkbox" name="sabores"> chocolate con almendra
+                <input type="checkbox" name="sabores"> vainilla
+                <input type="checkbox" name="sabores"> frutilla
+                <input type="checkbox" name="sabores"> dulce de leche
+                <input type="checkbox" name="sabores"> Maracuyá
 
-            <h3>Sabor de la salsa</h3>
+                <h3>Sabor de la salsa</h3>
 
-            <input type="radio" name="salsas"> frutos rojos
-            <input type="radio" name="postres"> chocolate
-            <input type="radio" name="postres"> caramelo
-            <input type="radio" name="postres"> dulce de leche 
-            
-            <div>
-                <input id="botones" type="submit" value="Pedir">
-                <input id="botones" type="reset" value="Borrar selección">
-            </div>
-            
+                <input type="radio" name="salsas"> frutos rojos
+                <input type="radio" name="postres"> chocolate
+                <input type="radio" name="postres"> caramelo
+                <input type="radio" name="postres"> dulce de leche 
+                
+                <div>
+                    <input id="botones" type="submit" value="Pedir">
+                    <input id="botones" type="reset" value="Borrar selección">
+                </div>
+                
 
 
-        </form>
+            </form>
     </section>
     <section class="videos_mapas">
 
