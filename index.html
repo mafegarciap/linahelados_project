@@ -24,6 +24,8 @@
                     <li class="ul_navppl"><a href="index.html">INICIO</a></li>
                     <li class="ul_navppl"><a href="quienes.html">QUIENES</a></li>
                     <li class="ul_navppl"><a href="contacto.html">CONTACTO</a></li>
+                    <li class="ul_navppl"><a href="">NUESTROS SABORES</a></li>
+                    <li class="ul_navppl"><a href="">SUSTENTABILIDAD</a></li>
                     
                 </ul>
             </nav>
@@ -31,18 +33,21 @@
             
         </div>
         <div id="banner_ppl">
-            <img src="img/banner_ppl.jpg" alt="baner helados en cono">
+            <img src="img/banner_dos.jpg" alt="baner helados en cono">
         </div>
         
     </header>
 
     
     <main>
-        <div id="titulo_principal">
+        <!-- <div id="titulo_principal">
             <h1>Lina - Helados artesanales</h1>
+        </div> -->
+        <div id="encabezado_retiro">
+            <h2>Elige donde quieres retirar tu orden!</h2>
+            <p>Tu orden puede ser retirada en el mostrador o te la acercamos hasta la mesa:</p>
         </div>
-        <h2>Elige donde quieres retirar tu orden!</h2>
-        <p>Tu orden puede ser retirada en el mostrador o te la acercamos hasta la mesa:</p>
+        
         
         <section class="lugar_retiro">
             <!-- recordar que el nombre de las imagenes no deberia tener espacios en blanco 
@@ -67,7 +72,7 @@
                 </label>
                 <label for="">
                     <input type="hidden" name="mostrador" value="mostrador">
-                    <input type="image" src="img/mostrador_heladeria.jpg" alt="mesas_heladeria">
+                    <input type="image" src="img/mostrador_rosa.jpg" alt="mesas_heladeria">
                     <h3>Mostrador</h3>
                 </label>
             </form>
@@ -81,39 +86,121 @@
 
                 <!-- componente -->
                 <div id="opciones_pedido">
+                    
+                    <label for="">
+                        <!-- <input type="hidden" name="conoSencillo" value="conoSencillo">
+                        <input type="image" src="img/icecream_single.jpg" alt="conoSencillo"> -->
+                        <!-- <img src="img/icecream_single.jpg" alt="conoSencillo"> -->
+                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <div class="mas_info">
+                           <div class="mas_info2">
+                                <div>
+                                    <input type="radio" name="conoSencillo"> cono sencillo
+                                </div>
+                                
+                                <p class="descripcion">Una bocha de helado, sabor a elección</p>
+                           </div>
+                            <p id="precio">$3000</p>
+                        </div>
+                        <!-- <h3>cono sencillo</h3> -->
+                    </label>
                     <label>
-                        <input type="hidden" name="milkshake" value="milkshake">
-                        <input type="image" src="img/milkshake_full.jpg" alt="milkshake">
-                        <h3>milkshake</h3>
+                        <!-- <input type="hidden" name="milkshake" value="milkshake">
+                        <input type="image" src="img/milkshake_full.jpg" alt="milkshake"> -->
+                        <!-- <img src="img/milkshake_full.jpg" alt="milkshake"> -->
+                        
+                        <img src="img/icecream_threeball.jpg" alt="conoDoble"><div class="mas_info">
+                            <div class="mas_info2">
+                                <div>
+                                    <input type="radio" name="milkshake"> milkshake
+                                </div>
+
+                                <p class="descripcion">Milkshake, a base de halado sabor a elección</p>
+                            </div>
+                            
+                            <p id="precio">$3000</p>
+                        </div>
+                        <!-- <h3>milkshake</h3> -->
                     </label>
                     <label for="">
-                        <input type="hidden" name="conoSencillo" value="conoSencillo">
-                        <input type="image" src="img/icecream_single.jpg" alt="conoSencillo">
-                        <h3>cono sencillo</h3>
+                        <!-- <input type="hidden" name="conoDoble" value="conoDoble">
+                        <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
+                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <div class="mas_info">
+                            <div class="mas_info2">
+                                <div>
+                                    <input type="radio" name="conoTriple"> cono triple
+                                </div>
+
+                                <p class="descripcion">Tres bochas de helado, sabor a elección</p>
+                            </div>
+                            
+                            <p id="precio">$3000</p>
+                        </div>
+                        <!-- <h3>cono doble</h3> -->
+                    </label>
+
+                    <!-- duplicados -->
+                    <label for="">
+                        <!-- <input type="hidden" name="conoDoble" value="conoDoble">
+                        <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
+                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <div class="mas_info">
+                            <div class="mas_info2">
+                                <div>
+                                    <input type="radio" name="conoTriple"> cono triple
+                                </div>
+
+                                <p class="descripcion">Tres bochas de helado, sabor a elección</p>
+                            </div>
+                            
+                            <p id="precio">$3000</p>
+                        </div>
+                        <!-- <h3>cono doble</h3> -->
                     </label>
                     <label for="">
-                        <input type="hidden" name="conoDoble" value="conoDoble">
-                        <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble">
-                        <h3>cono doble</h3>
+                        <!-- <input type="hidden" name="conoDoble" value="conoDoble">
+                        <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
+                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <div class="mas_info">
+                            <div class="mas_info2">
+                                <div>
+                                    <input type="radio" name="conoTriple"> cono triple
+                                </div>
+
+                                <p class="descripcion">Tres bochas de helado, sabor a elección</p>
+                            </div>
+                            
+                            <p id="precio">$3000</p>
+                            <!-- <p>Seleccionar</p> -->
+                        </div>
+                        <!-- <h3>cono doble</h3> -->
                     </label>
                 </div> 
                 
-
-                <h3>Sabor del helado</h3>
-
-                <input type="checkbox" name="sabores"> chocolate con almendra
-                <input type="checkbox" name="sabores"> vainilla
-                <input type="checkbox" name="sabores"> frutilla
-                <input type="checkbox" name="sabores"> dulce de leche
-                <input type="checkbox" name="sabores"> Maracuyá
-
-                <h3>Sabor de la salsa</h3>
-
-                <input type="radio" name="salsas"> frutos rojos
-                <input type="radio" name="postres"> chocolate
-                <input type="radio" name="postres"> caramelo
-                <input type="radio" name="postres"> dulce de leche 
+                <div>
+                    <h3>Sabor del helado</h3>
+                </div>
                 
+                <div>
+                    <input type="checkbox" name="sabores"> chocolate con almendra
+                    <input type="checkbox" name="sabores"> vainilla
+                    <input type="checkbox" name="sabores"> frutilla
+                    <input type="checkbox" name="sabores"> dulce de leche
+                    <input type="checkbox" name="sabores"> Maracuyá
+                </div>
+                
+                <div>
+                    <h3>Sabor de la salsa</h3>
+                </div>
+                    
+                <div>
+                    <input type="radio" name="salsas"> frutos rojos
+                    <input type="radio" name="salsas"> chocolate
+                    <input type="radio" name="salsas"> caramelo
+                    <input type="radio" name="salsas"> dulce de leche 
+                
+                </div>
                 <div>
                     <input id="botones" type="submit" value="Pedir">
                     <input id="botones" type="reset" value="Borrar selección">
@@ -130,6 +217,10 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.74247460907316!2d-75.55272730315623!3d10.237156586747231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625e7ae9d1351%3A0xb161392e033f26ca!2sCartagena%20de%20Indias%2C%20Provincia%20de%20Cartagena%2C%20Bol%C3%ADvar%2C%20Colombia!5e1!3m2!1ses!2sar!4v1728240256009!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
         </section>
+
+    <section id="logo_contacto">
+        <img src="img/contactanos.png" alt="contactanos">
+    </section>
         
 
     </main>
