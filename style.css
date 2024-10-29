@@ -95,6 +95,7 @@ ul.nav_principal a{
     justify-content: space-evenly;
     max-width: 100%;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /*.lugar_retiro div img{
@@ -225,6 +226,7 @@ Lo uso si convierto las imagenes en el boton directamente
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 
 }
 .caracteristicas_helado div{
@@ -284,13 +286,28 @@ footer{
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #form_contacto #datos{
+    box-sizing: border-box;
     width: 50%;
     height: 30px;
     border-color: grey;
     border-radius: 5px;
+    text-align: justify;
+    padding-left: 5px;
+    
+}
+
+#form_contacto #datos_textarea{
+    box-sizing: border-box;
+    width: 50%;
+    height: 70px;
+    border-color: grey;
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 

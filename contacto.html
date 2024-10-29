@@ -34,25 +34,27 @@
     <main>
         <p>¡Tienes alguna cosulta o reclamo? Dejanos tus datos en el siguiente formulario y te contactaremos a la brevedad posible:</p>
         
-        <form id="form_contacto" action="colecta.html">
+        <form id="form_contacto" action="https://formspree.io/f/xqakeojk" method="POST">
             <!-- colecta es el archivo a donde estoy enviando los datos -->
 
             <!-- componente -->
 
             
-            <input id="datos" type="text" placeholder="nombre completo"> 
+            <input id="datos" type="text" placeholder="nombre completo" name="name"> 
 
-            <input id="datos" type="text"placeholder="apellidos" maxlength="40"> 
+            <input id="datos" type="text"placeholder="apellidos" maxlength="40" name="lastName"> 
             
             <!-- si quiero deshabilitar un input uso el atributo disable -->
              <!-- <label for="">Telefono</label> <br>  -->
-            <input id="datos" type="text" placeholder="telefono"> 
+            <input id="datos" type="text" placeholder="telefono" name="telephone"> 
             
-            <input id="datos" type="email" placeholder="correo"> 
+            <input id="datos" type="email" placeholder="correo" name="email"> 
+
+            <input id="datos_textarea" type="textarea" placeholder="Déjanos aquí tu mensaje" name="message">
 
             <div>
                 <label for="">Tipo de solicitud</label>
-            <select name="" id="">
+            <select name="typeClaim" id="">
                 
                 <option value="reclamo">Reclamo</option>
                 <option value="sugerencia">Sugerencia</option>
