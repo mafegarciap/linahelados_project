@@ -63,6 +63,7 @@ main{
 
 ul.nav_principal a{
     color: palevioletred;
+    text-decoration: none
 }
 
 .ul_navppl{
@@ -140,6 +141,7 @@ ul.nav_principal a{
     flex-wrap: wrap;
     max-width: 100vw;
     justify-content: space-around;
+    margin-bottom: 40px;
    
 }
 
@@ -161,7 +163,7 @@ Lo uso si convierto las imagenes en el boton directamente
     /*width:fit-content;*/
     background-color: white;
     width: 250px;
-    height: 500px ;
+    /* height: 500px; */
     max-width: 100%;
     border-style: solid;
     border-color: white;
@@ -269,9 +271,15 @@ Lo uso si convierto las imagenes en el boton directamente
     border-radius: 5px;
     background-color: palevioletred;
     color: white;
-    border-color: grey;
+    /* border-color: grey; */
+    border: none;
     height: 30px;
     width: 150px;
+    transition: transform 0.2s ease;
+}
+
+#botones:hover {
+    transform: scale(1.05); /* Aumenta un 5% el tamaño */
 }
 
 

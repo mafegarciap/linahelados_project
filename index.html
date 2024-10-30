@@ -86,23 +86,24 @@
             <h2>¿Qué pedirás hoy? 🍧</h2>
              
             
-            <form action="https://formspree.io/f/xldegkvd" method="POST">
+            <!-- <form action="https://formspree.io/f/xldegkvd" method="POST"> -->
+            <form action="colecta.html" method="POST">
                 <!-- colecta es el archivo a donde estoy enviando los datos -->
 
                 <!-- componente -->
                 <div id="opciones_pedido">
                     
-                    <label for="">
+                    <label for="conoSencillo">
                         <!-- <input type="hidden" name="conoSencillo" value="conoSencillo">
                         <input type="image" src="img/icecream_single.jpg" alt="conoSencillo"> -->
                         <!-- <img src="img/icecream_single.jpg" alt="conoSencillo"> -->
                         <p class="nombreProducto">Cono sencillo</p>
-                       <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <img src="img/icecream_threeball.jpg" alt="conoSencillo"> 
                         
                         <div class="mas_info">
                            <div class="mas_info2">
                                 <div>
-                                    <input type="hidden" name="conoSencillo" value="conoSencillo">
+                                    <input type="radio" name="conoSencillo" value="conoSencillo"> cono sencillo
                                 </div>
                                 
                                 <p class="descripcion">Una bocha de helado, sabor a elección</p>
@@ -111,20 +112,22 @@
                            
                         </div>
                         <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+                        <button id="botones">Agregar</button>
                             
                             <!-- cuando hacen click:
                             <i class="fa-solid fa-heart" style="color: #d87093;"></i> -->
                         <!-- <h3>cono sencillo</h3> -->
                     </label>
-                    <label>
+                    <label for="milkshake">
                         <!-- <input type="hidden" name="milkshake" value="milkshake">
                         <input type="image" src="img/milkshake_full.jpg" alt="milkshake"> -->
                         <!-- <img src="img/milkshake_full.jpg" alt="milkshake"> -->
                         <p class="nombreProducto">Milkshake</p>
-                        <img src="img/icecream_threeball.jpg" alt="conoDoble"><div class="mas_info">
+                        <img src="img/icecream_threeball.jpg" alt="milkshake">
+                        <div class="mas_info">
                             <div class="mas_info2">
                                 <div>
-                                    <input type="radio" name="milkshake"> milkshake
+                                    <input type="radio" name="milkshake" value="milkshake"> milkshake
                                 </div>
 
                                 <p class="descripcion">Milkshake, a base de helado sabor a elección</p>
@@ -133,17 +136,18 @@
                             <p id="precio">$3000</p>
                         </div>
                         <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+                        <button id="botones">Agregar</button>
                         <!-- <h3>milkshake</h3> -->
                     </label>
-                    <label for="">
+                    <label for="conoTriple">
                         <!-- <input type="hidden" name="conoDoble" value="conoDoble">
                         <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
                         <p class="nombreProducto">Cono triple</p>
-                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <img src="img/icecream_threeball.jpg" alt="conoTriple">
                         <div class="mas_info">
                             <div class="mas_info2">
                                 <div>
-                                    <input type="radio" name="conoTriple"> cono triple
+                                    <input type="radio" name="conoTriple" value="conoTriple"> cono triple
                                 </div>
 
                                 <p class="descripcion">Tres bochas de helado, sabor a elección</p>
@@ -152,11 +156,12 @@
                             <p id="precio">$3000</p>
                         </div>
                         <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+                        <button id="botones">Agregar</button>
                         <!-- <h3>cono doble</h3> -->
                     </label>
 
                     <!-- duplicados -->
-                    <label for="">
+                    <label for="conoDoble">
                         <!-- <input type="hidden" name="conoDoble" value="conoDoble">
                         <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
                         <p class="nombreProducto">Cono doble</p>
@@ -164,7 +169,7 @@
                         <div class="mas_info">
                             <div class="mas_info2">
                                 <div>
-                                    <input type="radio" name="conoDoble"> cono doble
+                                    <input type="radio" name="conoDoble" vale="conoDoble"> cono doble
                                 </div>
 
                                 <p class="descripcion">Dos bochas de helado, sabor a elección</p>
@@ -173,9 +178,10 @@
                             <p id="precio">$3000</p>
                         </div>
                         <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+                        <button id="botones">Agregar</button>
                         <!-- <h3>cono doble</h3> -->
                     </label>
-                    <label for="">
+                    <label for="smoothie">
                         <!-- <input type="hidden" name="conoDoble" value="conoDoble">
                         <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
                         <p class="nombreProducto">Smoothie</p>
@@ -183,7 +189,7 @@
                         <div class="mas_info">
                             <div class="mas_info2">
                                 <div>
-                                    <input type="radio" name="conoTriple"> cono triple
+                                    <input type="radio" name="smoothie" value="smoothie"> cono triple
                                 </div>
 
                                 <p class="descripcion">Tres bochas de helado, sabor a elección</p>
@@ -193,6 +199,7 @@
                             <!-- <p>Seleccionar</p> -->
                         </div>
                         <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+                        <button id="botones">Agregar</button>
                         <!-- <h3>cono doble</h3> -->
                     </label>
                 </div> 
@@ -202,11 +209,11 @@
                 </div>
                 
                 <div>
-                    <input type="checkbox" name="sabores"> chocolate con almendra
-                    <input type="checkbox" name="sabores"> vainilla
-                    <input type="checkbox" name="sabores"> frutilla
-                    <input type="checkbox" name="sabores"> dulce de leche
-                    <input type="checkbox" name="sabores"> Maracuyá
+                    <input type="checkbox" name="sabores" value="chocoAlm"> chocolate con almendra
+                    <input type="checkbox" name="sabores" value="vainilla"> vainilla
+                    <input type="checkbox" name="sabores" value="frutilla"> frutilla
+                    <input type="checkbox" name="sabores" value="dulceLeche"> dulce de leche
+                    <input type="checkbox" name="sabores" value="maracuya"> maracuyá
                 </div>
                 
                 <div>
@@ -214,15 +221,15 @@
                 </div>
                     
                 <div>
-                    <input type="radio" name="salsas"> frutos rojos
-                    <input type="radio" name="salsas"> chocolate
-                    <input type="radio" name="salsas"> caramelo
-                    <input type="radio" name="salsas"> dulce de leche 
+                    <input type="radio" name="salsas" value="frutosRojos"> frutos rojos
+                    <input type="radio" name="salsas" value="chocolate"> chocolate
+                    <input type="radio" name="salsas" value="caramelo"> caramelo
+                    <input type="radio" name="salsas" value="dulceLeche"> dulce de leche 
                 
                 </div>
                 <div>
-                    <input id="botones" type="submit" value="Pedir">
-                    <input id="botones" type="reset" value="Borrar selección">
+                    <input id="botones" type="submit" value="PEDIR">
+                    <input id="botones" type="reset" value="BORRAR SELECCION">
                 </div>
                 
 
@@ -238,7 +245,7 @@
         </section>
 
     <section id="logo_contacto">
-        <img src="img/contactanos.png" alt="contactanos">
+        <a href="contacto.html"><img src="img/contactanos.png" alt="contactanos"></a>
     </section>
         
 
