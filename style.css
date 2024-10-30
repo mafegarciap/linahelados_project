@@ -5,6 +5,12 @@
 body{
     background-image: url("img/fondo_principal.jpg");
     /*width: 100vw;*/
+    
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+      
 }
 #titulo_principal{
     display: flex;
@@ -149,7 +155,7 @@ Lo uso si convierto las imagenes en el boton directamente
     flex-direction: column;
     align-items: center;
     color:rgb(99, 97, 97);
-    gap: 5px;
+    gap: 3px;
     /*font-size: medium;*/
     border-radius: 5px;
     /*width:fit-content;*/
@@ -158,9 +164,9 @@ Lo uso si convierto las imagenes en el boton directamente
     height: 500px ;
     max-width: 100%;
     border-style: solid;
-    border-color: rgb(99, 97, 97);
-    border-width: 1px;
+    border-color: white;
     margin-bottom: 5px;
+    position: relative;
 }
 
 #opciones_pedido h3{
@@ -193,7 +199,22 @@ Lo uso si convierto las imagenes en el boton directamente
    justify-content: space-around;
    /*flex-direction: column;
    */
+   margin: 0px;
 }
+
+.nombreProducto{
+    font-weight: bold;
+}
+
+.fa-heart{
+    font-size: larger;
+    position: relative;
+    bottom: 10px;
+    left: 90px;
+
+
+}
+
 #opciones_pedido label .mas_info{
     display: flex;
    justify-content: space-between;
@@ -214,11 +235,17 @@ Lo uso si convierto las imagenes en el boton directamente
     
 }
 
+#opciones_pedido label .mas_info2 .descripcion{
+    font-size: small;
+    
+}
+
 #precio{
    /* color:rgba(126,140,	105);*/
    font-size: larger;
    font-weight: bold;
    padding-right: 5px;
+   
 }
 
 .caracteristicas_helado{
@@ -279,6 +306,7 @@ footer{
     margin-top: 10px;
     /*padding: 10px;*/
     width: 100%;
+    margin-bottom: 0px;
 }
 
 #form_contacto{

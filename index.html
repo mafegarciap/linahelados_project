@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lina Helados</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Updock&display=swap" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Updock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Updock&display=swap" rel="stylesheet">
     <!-- la siguiente linea siempre debe ir en el head -->
+    <script src="https://kit.fontawesome.com/e68820bd1c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -64,7 +68,7 @@
                 <h3>Mostrador</h3>
             </div> -->
 
-            <form action="">
+            <form action="https://formspree.io/f/xldegkvd" method="POST">
                 <label>
                     <input type="hidden" name="mesas" value="mesas">
                     <input type="image" src="img/mesas_heladeria.jpg" alt="mesas heladeria">
@@ -92,40 +96,49 @@
                         <!-- <input type="hidden" name="conoSencillo" value="conoSencillo">
                         <input type="image" src="img/icecream_single.jpg" alt="conoSencillo"> -->
                         <!-- <img src="img/icecream_single.jpg" alt="conoSencillo"> -->
-                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <p class="nombreProducto">Cono sencillo</p>
+                       <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        
                         <div class="mas_info">
                            <div class="mas_info2">
                                 <div>
-                                    <input type="radio" name="conoSencillo"> cono sencillo
+                                    <input type="hidden" name="conoSencillo" value="conoSencillo">
                                 </div>
                                 
                                 <p class="descripcion">Una bocha de helado, sabor a elección</p>
                            </div>
                             <p id="precio">$3000</p>
+                           
                         </div>
+                        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+                            
+                            <!-- cuando hacen click:
+                            <i class="fa-solid fa-heart" style="color: #d87093;"></i> -->
                         <!-- <h3>cono sencillo</h3> -->
                     </label>
                     <label>
                         <!-- <input type="hidden" name="milkshake" value="milkshake">
                         <input type="image" src="img/milkshake_full.jpg" alt="milkshake"> -->
                         <!-- <img src="img/milkshake_full.jpg" alt="milkshake"> -->
-                        
+                        <p class="nombreProducto">Milkshake</p>
                         <img src="img/icecream_threeball.jpg" alt="conoDoble"><div class="mas_info">
                             <div class="mas_info2">
                                 <div>
                                     <input type="radio" name="milkshake"> milkshake
                                 </div>
 
-                                <p class="descripcion">Milkshake, a base de halado sabor a elección</p>
+                                <p class="descripcion">Milkshake, a base de helado sabor a elección</p>
                             </div>
                             
                             <p id="precio">$3000</p>
                         </div>
+                        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
                         <!-- <h3>milkshake</h3> -->
                     </label>
                     <label for="">
                         <!-- <input type="hidden" name="conoDoble" value="conoDoble">
                         <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
+                        <p class="nombreProducto">Cono triple</p>
                         <img src="img/icecream_threeball.jpg" alt="conoDoble">
                         <div class="mas_info">
                             <div class="mas_info2">
@@ -138,6 +151,7 @@
                             
                             <p id="precio">$3000</p>
                         </div>
+                        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
                         <!-- <h3>cono doble</h3> -->
                     </label>
 
@@ -145,24 +159,27 @@
                     <label for="">
                         <!-- <input type="hidden" name="conoDoble" value="conoDoble">
                         <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
+                        <p class="nombreProducto">Cono doble</p>
                         <img src="img/icecream_threeball.jpg" alt="conoDoble">
                         <div class="mas_info">
                             <div class="mas_info2">
                                 <div>
-                                    <input type="radio" name="conoTriple"> cono triple
+                                    <input type="radio" name="conoDoble"> cono doble
                                 </div>
 
-                                <p class="descripcion">Tres bochas de helado, sabor a elección</p>
+                                <p class="descripcion">Dos bochas de helado, sabor a elección</p>
                             </div>
                             
                             <p id="precio">$3000</p>
                         </div>
+                        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
                         <!-- <h3>cono doble</h3> -->
                     </label>
                     <label for="">
                         <!-- <input type="hidden" name="conoDoble" value="conoDoble">
                         <input type="image" src="img/icecream_threeball.jpg" alt="conoDoble"> -->
-                        <img src="img/icecream_threeball.jpg" alt="conoDoble">
+                        <p class="nombreProducto">Smoothie</p>
+                        <img src="img/icecream_threeball.jpg" alt="smoothie">
                         <div class="mas_info">
                             <div class="mas_info2">
                                 <div>
@@ -175,6 +192,7 @@
                             <p id="precio">$3000</p>
                             <!-- <p>Seleccionar</p> -->
                         </div>
+                        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
                         <!-- <h3>cono doble</h3> -->
                     </label>
                 </div> 
