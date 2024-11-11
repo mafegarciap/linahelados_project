@@ -136,6 +136,9 @@ ul.nav_principal a{
     /*margin:5px;*/
 }
 
+#heladoOpciones_titulo{
+    text-align: center;
+}
 #opciones_pedido{
     /* display: flex;
     flex-wrap: wrap; */
@@ -263,6 +266,7 @@ Lo uso si convierto las imagenes en el boton directamente
 }
 .caracteristicas_helado div{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 10px;
     gap: 10px;
@@ -372,7 +376,12 @@ footer{
     /* #opciones_pedido label{
         gap: 20px;
     } */
-
+    #opciones_pedido{
+        justify-items: center;
+        grid-template-columns: 1fr; /* Una sola columna */
+        /* prubeas */
+        
+    }
     #opciones_pedido label{
         gap: 20px;
         margin-bottom: 30px;
