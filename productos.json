@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cono Sencillo",
+        "descripcion": "Un clásico cono con una bola de helado a elección.",
+        "precio": 2000,
+        "foto": "https://example.com/cono-sencillo.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Cono Doble",
+        "descripcion": "Cono con dos bolas de helado combinables a elección.",
+        "precio": 3500,
+        "foto": "https://example.com/cono-doble.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Cono Triple",
+        "descripcion": "Cono con tres bolas de helado de diferentes sabores.",
+        "precio": 4000,
+        "foto": "https://example.com/cono-triple.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Milkshake",
+        "descripcion": "Bebida cremosa hecha con helado y leche, disponible en varios sabores.",
+        "precio": 4500,
+        "foto": "https://example.com/milkshake.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Smoothie",
+        "descripcion": "Refrescante bebida de frutas mezcladas, ideal para un día caluroso.",
+        "precio": 4000,
+        "foto": "https://example.com/smoothie.jpg"
+    }
+]

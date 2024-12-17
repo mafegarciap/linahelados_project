@@ -18,7 +18,9 @@ body{
     margin: 10p
 }
 h1 {
-    font-family: "Updock", cursive;
+    font-family: "Montserrat", sans-serif;
+
+    /* font-family: "Updock"; */
     font-weight: 900;
     font-style:normal;
     color: palevioletred;
@@ -45,12 +47,43 @@ main{
 }
 
 .container_header{
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
     max-width: 100%;
     margin: 5px;
 }
+
+/*Cambios de estilos del elemento navbar de bootstrap*/
+.navbar{
+    background-color: transparent !important;
+    /* max-width: 100%; */
+
+}
+
+.navbar a{
+    color: palevioletred !important;
+    /* text-decoration: none; */
+    font-weight: bold;
+}
+
+.dropdown-item{
+    /* text-decoration: none; */
+    font-weight:normal !important; 
+}
+
+.form-control{
+    font-weight: lighter;
+}
+
+.btn {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+}
+
+
+/*Cambios de estilos del elemento navbar de bootstrap*/
 
 .nav_principal{
     display: flex;
@@ -255,6 +288,22 @@ Lo uso si convierto las imagenes en el boton directamente
    
 }
 
+.ver-mas {
+    background: none;           /* Elimina el fondo */
+     /*color: #d87093;             Color de texto personalizado (como un enlace) */
+    border: none;               /* Elimina el borde */
+    padding: 0;                 /* Elimina el relleno */
+    font-size: small;            /* Tamaño de fuente */
+    /*text-decoration: underline; Subraya el texto */
+    cursor: pointer;           /* Cambia el cursor a mano */
+  }
+
+.nombre-rosa{
+    color: palevioletred;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .caracteristicas_helado{
     display: flex;
     flex-direction: column;
@@ -274,7 +323,7 @@ Lo uso si convierto las imagenes en el boton directamente
 
 }
 
-#botones{
+.botones{
     border-radius: 5px;
     background-color: palevioletred;
     color: white;
@@ -285,7 +334,7 @@ Lo uso si convierto las imagenes en el boton directamente
     transition: transform 0.2s ease;
 }
 
-#botones:hover {
+.botones:hover {
     transform: scale(1.05); /* Aumenta un 5% el tamaño */
 }
 
@@ -333,7 +382,7 @@ footer{
     margin-bottom: 50px;
 }
 
-#form_contacto #datos{
+#form_contacto .datos{
     box-sizing: border-box;
     width: 50%;
     height: 30px;
@@ -351,6 +400,7 @@ footer{
     border-color: grey;
     border-radius: 5px;
     padding-left: 5px;
+    text-align: justify;
 }
 
 
