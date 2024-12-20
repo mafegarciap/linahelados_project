@@ -108,28 +108,15 @@
         
         
         <section class="lugar_retiro">
-            <!-- recordar que el nombre de las imagenes no deberia tener espacios en blanco 
-             px es pixeles es una unidad fija fijo-->
-             <!-- <img src="img/mesas_heladeria.jpg" alt="mostrador heladeria" width="300px"> -->
-            <!-- <img src="img/mostrador_heladeria.jpg" alt="mesas_heladeria" width="300px"> -->
 
-            <!-- <div>
-                <img src="img/mesas_heladeria.jpg" alt="mostrador heladeria">
-                <h3>Mesas</h3>
-            </div>
-            <div>
-                <img src="img/mostrador_heladeria.jpg" alt="mesas_heladeria">
-                <h3>Mostrador</h3>
-            </div> -->
-
-            <form action="">
+            <form action="" id="formulario_retiro">
                 <label>
-                    <input type="hidden" name="mesas" value="mesas">
+                    <input type="hidden" name="retiro" value="mesas">
                     <input type="image" src="img/mesas_heladeria.jpg" alt="mesas heladeria">
                     <h3>Mesas</h3>
                 </label>
                 <label for="">
-                    <input type="hidden" name="mostrador" value="mostrador">
+                    <input type="hidden" name="retiro" value="mostrador">
                     <input type="image" src="img/mostrador_rosa.jpg" alt="mesas_heladeria">
                     <h3>Mostrador</h3>
                 </label>
@@ -140,44 +127,12 @@
              
         <section class="caracteristicas_helado">
            
-            <!-- <h2>¿Qué pedirás hoy? 🍧</h2> -->
-             
-            
-            <!-- <form action="https://formspree.io/f/xldegkvd" method="POST"> -->
-                <form action="colecta.html">
-                    <!-- githubpage no acepta el metodo page -->
-                <!-- <form action="colecta.html" method="POST"> -->
-                <!-- colecta es el archivo a donde estoy enviando los datos -->
-
+           
+                <form action="">
+                   
                 <!-- componente -->
                 <div id="opciones_pedido">
-                    
-                    <!-- <label for="conoSencillo" id="card_base"> -->
-                        <!-- <input type="hidden" name="conoSencillo" value="conoSencillo">
-                        <input type="image" src="img/icecream_single.jpg" alt="conoSencillo"> -->
-                        <!-- <img src="img/icecream_single.jpg" alt="conoSencillo"> -->
-                        <!-- <p class="nombreProducto">Cono sencillo</p>
-                        <img src="img/icecream_threeball.jpg" alt="conoSencillo"> 
-                        
-                        <div class="mas_info">
-                           <div class="mas_info2">
-                                <div>
-                                    <input type="radio" name="conoSencillo" value="conoSencillo"> cono sencillo
-                                </div>
-                                
-                                <p class="descripcion">Una bocha de helado, sabor a elección</p>
-                           </div>
-                            <p id="precio">$3000</p>
-                           
-                        </div>
-                        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
-                        <button class="botones">Agregar</button> -->
-                            
-                            <!-- cuando hacen click:
-                            <i class="fa-solid fa-heart" style="color: #d87093;"></i> -->
-                        <!-- <h3>cono sencillo</h3> -->
-                    <!-- </label> -->
-                   <!-- aca corte el codigo -->
+                   
                 </div> 
                 
                 <div>
@@ -204,7 +159,7 @@
                 
                 </div>
                 <div>
-                    <input class="botones" type="submit" value="PEDIR">
+                    <input class="botones" id="finalizarPedido" type="submit" value="PEDIR">
                     <input class="botones" type="reset" value="BORRAR">
                 </div>
                 
@@ -214,8 +169,13 @@
     </section>
 
     <section id="resumen_pedido">
+        <h2>Resumen de la orden</h2>
         <p id="nombre_cliente"></p>
         <p>El resumen de su orden es el siguiente:</p>
+        <p id="resumenLugarRetiro"></p>
+        <ul id="resumenProductos"></ul>
+        <p id="resumenTotalOrden"></p>
+        <button id="finalizarOrden" class="botones" disabled>Finalizar Orden</button>
 
 
 

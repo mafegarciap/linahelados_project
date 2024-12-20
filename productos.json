@@ -2,36 +2,41 @@
     {
         "id": 1,
         "nombre": "Cono Sencillo",
-        "descripcion": "Un clásico cono con una bola de helado a elección.",
+        "descripcion_corta": "Un clásico cono con...",
+        "descripcion_larga": "Un clásico cono con una bola de helado a elección.",
         "precio": 2000,
-        "foto": "https://example.com/cono-sencillo.jpg"
+        "foto": "img/icecream_threeball.jpg"
     },
     {
         "id": 2,
         "nombre": "Cono Doble",
-        "descripcion": "Cono con dos bolas de helado combinables a elección.",
+        "descripcion_corta": "Cono con dos bolas...",
+        "descripcion_larga": "Cono con dos bolas de helado combinables a elección.",
         "precio": 3500,
-        "foto": "https://example.com/cono-doble.jpg"
+        "foto": "img/icecream_threeball.jpg"
     },
     {
         "id": 3,
         "nombre": "Cono Triple",
-        "descripcion": "Cono con tres bolas de helado de diferentes sabores.",
+        "descripcion_corta": "Cono con tres bolas...",
+        "descripcion_larga": "Cono con tres bolas de helado de diferentes sabores.",
         "precio": 4000,
-        "foto": "https://example.com/cono-triple.jpg"
+        "foto": "img/icecream_threeball.jpg"
     },
     {
         "id": 4,
         "nombre": "Milkshake",
-        "descripcion": "Bebida cremosa hecha con helado y leche, disponible en varios sabores.",
+        "descripcion_corta": "Bebida cremosa...",
+        "descripcion_larga": "Bebida cremosa hecha con helado y leche, disponible en varios sabores.",
         "precio": 4500,
-        "foto": "https://example.com/milkshake.jpg"
+        "foto": "img/icecream_threeball.jpg"
     },
     {
         "id": 5,
         "nombre": "Smoothie",
-        "descripcion": "Refrescante bebida de frutas mezcladas, ideal para un día caluroso.",
+        "descripcion_corta": "Refrescante bebida...",
+        "descripcion_larga": "Refrescante bebida de frutas mezcladas, ideal para un día caluroso.",
         "precio": 4000,
-        "foto": "https://example.com/smoothie.jpg"
+        "foto": "img/icecream_threeball.jpg"
     }
 ]

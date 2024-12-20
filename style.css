@@ -207,6 +207,7 @@ Lo uso si convierto las imagenes en el boton directamente
     border-color: white;
     margin-bottom: 5px;
     position: relative;
+    /* border-image: linear-gradient(45deg, gray, lightgray) 1; */
 }
 
 #opciones_pedido h3{
@@ -220,6 +221,7 @@ Lo uso si convierto las imagenes en el boton directamente
     /*width: 300px;*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    /* border-image: linear-gradient(45deg, gray, lightgray) 1; */
 }
 
 /*#opciones_pedido img:hover{
@@ -290,7 +292,7 @@ Lo uso si convierto las imagenes en el boton directamente
 
 .ver-mas {
     background: none;           /* Elimina el fondo */
-     /*color: #d87093;             Color de texto personalizado (como un enlace) */
+     /*color: #d87093;*/
     border: none;               /* Elimina el borde */
     padding: 0;                 /* Elimina el relleno */
     font-size: small;            /* Tamaño de fuente */
@@ -302,6 +304,7 @@ Lo uso si convierto las imagenes en el boton directamente
     color: palevioletred;
     text-transform: uppercase;
     font-weight: bold;
+    /* align-content: center; */
 }
 
 .caracteristicas_helado{
@@ -320,6 +323,12 @@ Lo uso si convierto las imagenes en el boton directamente
     margin: 10px;
     gap: 10px;
     
+
+}
+
+#resumen_pedido{
+    margin-top: 20px;
+    padding-left: 50px;
 
 }
 
