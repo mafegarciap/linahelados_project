@@ -1,117 +1,27 @@
-//----pedir nombre del cliente con una promp lindo(OJO PONERLO LINDO)
-let nombreCliente= prompt("Ingrese su nombre")
+// import Swal from 'sweetalert2'
 
-let nombreClienteHtml= document.getElementById("nombre_cliente")
-console.log(nombreCliente);
-//console.log(nombreClienteHtml);
-// Guardar el nombre en localStorage
-localStorage.setItem("nombreCliente", nombreCliente);
+let nombreCliente = localStorage.getItem("nombreCliente");
 
-//Mostrar el nombre del cliente en la sección del resumen del pedido
-//nombreClienteHtml.innerHTML=`Hola <span class="nombre-rosa">${nombreCliente}</span>`
-// Verificar si hay un nombre guardado en sessionStorage
-let nombreGuardado = localStorage.getItem("nombreCliente");
 
-if (nombreGuardado) {
-    document.getElementById("nombre_cliente").innerHTML = `Hola <span class="nombre-rosa">${nombreGuardado}</span>`;
+
+if (!nombreCliente) {
+    nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
+
+    if (nombreCliente) {
+        // Guardar el nombre en localStorage
+        localStorage.setItem("nombreCliente", nombreCliente);
+    } //else {
+    //     alert("¡Es necesario ingresar tu nombre!");
+    // }
 }
 
+let nombreClienteHtml = document.getElementById("nombre_cliente");
+console.log(nombreCliente);
 
-//OJO ponerle margen a esa sección
+// Mostrar el nombre del cliente en la sección del resumen del pedido
+nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
 
-//----listado de productos que se muestra en el home----
 
-/*const productos=[
-    {
-        "id": 1,
-        "nombre": "Cono Sencillo",
-        "descripcion_corta": "Un clásico cono con...",
-        "descripcion_larga": "Un clásico cono con una bola de helado a elección.",
-        "precio": 2000,
-        "foto": 'img/icecream_threeball.jpg'
-    },
-    {
-        "id": 2,
-        "nombre": "Cono Doble",
-        "descripcion_corta": "Cono con dos bolas...",
-        "descripcion_larga": "Cono con dos bolas de helado combinables a elección.",
-        "precio": 3500,
-        "foto": "img/icecream_threeball.jpg"
-    },
-    {
-        "id": 3,
-        "nombre": "Cono Triple",
-        "descripcion_corta": "Cono con tres bolas...",
-        "descripcion_larga": "Cono con tres bolas de helado de diferentes sabores.",
-        "precio": 4000,
-        "foto": "img/icecream_threeball.jpg"
-    },
-    {
-        "id": 4,
-        "nombre": "Milkshake",
-        "descripcion_corta": "Bebida cremosa...",
-        "descripcion_larga": "Bebida cremosa hecha con helado y leche, disponible en varios sabores.",
-        "precio": 4500,
-        "foto": "img/icecream_threeball.jpg"
-    },
-    {
-        "id": 5,
-        "nombre": "Smoothie",
-        "descripcion_corta": "Refrescante bebida...",
-        "descripcion_larga": "Refrescante bebida de frutas mezcladas, ideal para un día caluroso.",
-        "precio": 4000,
-        "foto": "img/icecream_threeball.jpg"
-    }
-]*/
-
-//----mostrar productos en el html desde un array-----
-//capturo el contenedor:
-//const contenedorCards = document.getElementById("opciones_pedido");
-
-// Recorrerlo mediante un for
-/*for (let i = 0; i < productos.length; i++) {
-    const producto = productos[i];
-
-    // Crear el elemento contenedor principal
-    const card = document.createElement("label");
-
-    // Crear la estructura HTML para la card
-    card.innerHTML = `
-        <p class="nombreProducto">${producto.nombre}</p>
-        <img src="${producto.foto}" alt="${producto.nombre}">
-        <div class="mas_info">
-            <p class="descripcion" id="descripcion-${producto.id}">${producto.descripcion_corta}</p>
-            <button class="ver-mas" data-id="${producto.id}" type="button">Ver más</button> <!-- Se agregó type="button" -->
-            <p id="precio">$${producto.precio}</p>
-        </div>
-        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
-        <button class="botones">Agregar</button>
-    `;
-
-    // Agregar la card al contenedor principal
-    contenedorCards.appendChild(card);
-
-    // Capturar el botón "Ver más" y la descripción
-    const botonVerMas = card.querySelector(".ver-mas");
-    const descripcionParrafo = card.querySelector(".descripcion");
-
-    // Añadir el evento de clic para alternar la descripción
-    botonVerMas.addEventListener("click", function(event) {
-        event.preventDefault(); // Prevenir el envío del formulario
-
-        const productoId = event.target.getAttribute("data-id"); // Obtener el id del producto
-        const producto = productos.find(p => p.id == productoId); // Buscar el producto en el array
-
-        // Alternar la descripción entre corta y larga
-        if (descripcionParrafo.textContent === producto.descripcion_corta) {
-            descripcionParrafo.textContent = producto.descripcion_larga;
-            event.target.textContent = "Ver menos"; // Cambiar el texto del botón
-        } else {
-            descripcionParrafo.textContent = producto.descripcion_corta;
-            event.target.textContent = "Ver más"; // Cambiar el texto del botón
-        }
-    });
-}*/
 
 //----mostrar productos en el html desde un .json----
 //capturo en contenedor
@@ -207,19 +117,20 @@ formularioRetiro.addEventListener("click", function (e) {
 
 //cards
 // Manejar botones para agregar en las cards
-botonesAgregar.forEach(boton => {
-    boton.addEventListener("click", function (e) {
-        e.preventDefault();
-        const card = e.target.closest(".card"); // Obtener la card actual
-        const nombre = card.querySelector(".nombreProducto").textContent;
-        //const descripcion = card.querySelector(".descripcion").textContent;
-        const precio = parseInt(card.querySelector(".precio").textContent);
+// botonesAgregar.forEach(boton => {
+//     boton.addEventListener("click", function (e) {
+//         e.preventDefault();
+//         const card = e.target.closest(".card"); // Obtener la card actual
+//         const nombre = card.querySelector(".nombreProducto").textContent;
+//         //const descripcion = card.querySelector(".descripcion").textContent;
+//         const precio = parseInt(card.querySelector(".precio").textContent);
 
-        // Agregar producto al carrito
-        carrito.push({ nombre, precio });
-        alert(`Producto agregado: ${nombre} - ${precio}`);
-    });
-});
+//         // Agregar producto al carrito
+//         carrito.push({ nombre, precio });
+//         alert(`Producto agregado: ${nombre} - ${precio}`);
+      
+//     });
+// });
 
 //---probando manejar el evento con el contenedor principal en vez de con los botones
 // Delegar eventos al contenedor principal
@@ -229,7 +140,8 @@ contenedorCards.addEventListener("click", function (e) {
         const nombre = card.querySelector(".nombreProducto").textContent;
         const precio = parseInt(card.querySelector("#precio").textContent.replace("$", ""));
         carrito.push({ nombre, precio });
-        alert(`Producto agregado: ${nombre} - $${precio}`);
+        //alert(`Producto agregado: ${nombre} - $${precio}`);
+        Swal.fire(`Producto agregado: ${nombre} - $${precio}`);
     }
 });
 
@@ -336,7 +248,8 @@ finalizarOrdenBtn.addEventListener("click", function () {
     resumenTotal.textContent = "";
 
     // Eliminar el nombre del cliente del localStorage
-    localStorage.removeItem("nombreCliente");
+   // localStorage.removeItem("nombreCliente");
+    localStorage.removeItem("lugarRetiro");
 
     // Limpiar el saludo con el nombre del cliente
     document.getElementById("nombre_cliente").textContent = "";
@@ -345,20 +258,26 @@ finalizarOrdenBtn.addEventListener("click", function () {
     finalizarOrdenBtn.disabled = true;
 
     // Mostrar un mensaje o redirigir a otra página si es necesario
-    alert("Gracias por tu compra. ¡Te esperamos pronto!");
+    //alert("Gracias por tu compra. ¡Te esperamos pronto!");
+    // Redirigir a otra página
+    window.location.href = "colecta.html"
 });
 
+//borrar el nombre del cliente
+function borrarNombreCliente() {
+    localStorage.removeItem('nombreCliente'); // Eliminar el nombre del localStorage
+    alert('Nombre del cliente borrado');
+    //Swal.fire('Nombre del cliente borrado');
+    nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
+    localStorage.setItem("nombreCliente", nombreCliente);
+    nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
+}
+
+// agregar el evento al boton
+document.getElementById('borrar_nombre').addEventListener('click', borrarNombreCliente);
 
 
-
-
-
-
-
-
-
-
-//Validación formulario pagina contacto
+//Validar formulario pagina contacto
 // Funcion para verificar si todos los campos estan completos
 
 function validarFormularioCompleto(event) {
@@ -400,3 +319,99 @@ document.getElementById('form_contacto').addEventListener('submit', validarFormu
 // for (const producto of productos) {
 //     console.log(`ID: ${producto.id}, Nombre: ${producto.nombre}, Descripción: ${producto.descripcion}, Precio: $${producto.precio}`);
 // }
+
+//OJO ponerle margen a esa sección
+
+//----listado de productos que se muestra en el home----
+
+/*const productos=[
+    {
+        "id": 1,
+        "nombre": "Cono Sencillo",
+        "descripcion_corta": "Un clásico cono con...",
+        "descripcion_larga": "Un clásico cono con una bola de helado a elección.",
+        "precio": 2000,
+        "foto": 'img/icecream_threeball.jpg'
+    },
+    {
+        "id": 2,
+        "nombre": "Cono Doble",
+        "descripcion_corta": "Cono con dos bolas...",
+        "descripcion_larga": "Cono con dos bolas de helado combinables a elección.",
+        "precio": 3500,
+        "foto": "img/icecream_threeball.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Cono Triple",
+        "descripcion_corta": "Cono con tres bolas...",
+        "descripcion_larga": "Cono con tres bolas de helado de diferentes sabores.",
+        "precio": 4000,
+        "foto": "img/icecream_threeball.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Milkshake",
+        "descripcion_corta": "Bebida cremosa...",
+        "descripcion_larga": "Bebida cremosa hecha con helado y leche, disponible en varios sabores.",
+        "precio": 4500,
+        "foto": "img/icecream_threeball.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Smoothie",
+        "descripcion_corta": "Refrescante bebida...",
+        "descripcion_larga": "Refrescante bebida de frutas mezcladas, ideal para un día caluroso.",
+        "precio": 4000,
+        "foto": "img/icecream_threeball.jpg"
+    }
+]*/
+
+//----mostrar productos en el html desde un array-----
+//capturo el contenedor:
+//const contenedorCards = document.getElementById("opciones_pedido");
+
+// Recorrerlo mediante un for
+/*for (let i = 0; i < productos.length; i++) {
+    const producto = productos[i];
+
+    // Crear el elemento contenedor principal
+    const card = document.createElement("label");
+
+    // Crear la estructura HTML para la card
+    card.innerHTML = `
+        <p class="nombreProducto">${producto.nombre}</p>
+        <img src="${producto.foto}" alt="${producto.nombre}">
+        <div class="mas_info">
+            <p class="descripcion" id="descripcion-${producto.id}">${producto.descripcion_corta}</p>
+            <button class="ver-mas" data-id="${producto.id}" type="button">Ver más</button> <!-- Se agregó type="button" -->
+            <p id="precio">$${producto.precio}</p>
+        </div>
+        <i class="fa-regular fa-heart" style="color: #d87093;"></i>
+        <button class="botones">Agregar</button>
+    `;
+
+    // Agregar la card al contenedor principal
+    contenedorCards.appendChild(card);
+
+    // Capturar el botón "Ver más" y la descripción
+    const botonVerMas = card.querySelector(".ver-mas");
+    const descripcionParrafo = card.querySelector(".descripcion");
+
+    // Añadir el evento de clic para alternar la descripción
+    botonVerMas.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevenir el envío del formulario
+
+        const productoId = event.target.getAttribute("data-id"); // Obtener el id del producto
+        const producto = productos.find(p => p.id == productoId); // Buscar el producto en el array
+
+        // Alternar la descripción entre corta y larga
+        if (descripcionParrafo.textContent === producto.descripcion_corta) {
+            descripcionParrafo.textContent = producto.descripcion_larga;
+            event.target.textContent = "Ver menos"; // Cambiar el texto del botón
+        } else {
+            descripcionParrafo.textContent = producto.descripcion_corta;
+            event.target.textContent = "Ver más"; // Cambiar el texto del botón
+        }
+    });
+}*/

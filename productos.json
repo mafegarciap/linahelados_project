@@ -5,7 +5,7 @@
         "descripcion_corta": "Un clásico cono con...",
         "descripcion_larga": "Un clásico cono con una bola de helado a elección.",
         "precio": 2000,
-        "foto": "img/icecream_threeball.jpg"
+        "foto": "img/conoSencillo.jpg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "descripcion_corta": "Cono con dos bolas...",
         "descripcion_larga": "Cono con dos bolas de helado combinables a elección.",
         "precio": 3500,
-        "foto": "img/icecream_threeball.jpg"
+        "foto": "img/conoDoble.jpg"
     },
     {
         "id": 3,
@@ -29,7 +29,7 @@
         "descripcion_corta": "Bebida cremosa...",
         "descripcion_larga": "Bebida cremosa hecha con helado y leche, disponible en varios sabores.",
         "precio": 4500,
-        "foto": "img/icecream_threeball.jpg"
+        "foto": "img/milkshake.jpg"
     },
     {
         "id": 5,
@@ -37,6 +37,6 @@
         "descripcion_corta": "Refrescante bebida...",
         "descripcion_larga": "Refrescante bebida de frutas mezcladas, ideal para un día caluroso.",
         "precio": 4000,
-        "foto": "img/icecream_threeball.jpg"
+        "foto": "img/smoothie.jpg"
     }
 ]
