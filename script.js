@@ -3,17 +3,51 @@
 let nombreCliente = localStorage.getItem("nombreCliente");
 
 
-
+//if (!nombreCliente || nombreCliente==null) {
 if (!nombreCliente) {
-    nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
+    //nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
 
-    if (nombreCliente) {
-        // Guardar el nombre en localStorage
-        localStorage.setItem("nombreCliente", nombreCliente);
-    } //else {
-    //     alert("¡Es necesario ingresar tu nombre!");
-    // }
+    // if (nombreCliente) {
+    //     // Guardar el nombre en localStorage
+    //     localStorage.setItem("nombreCliente", nombreCliente);
+    // } else if(nombreCliente==null){
+    //     Swal.fire({text:'¡Es necesario ingresar tu nombre!',
+    //         confirmButtonColor: 'rgb(216,112,147)'
+    //     });
+    //      //alert("¡Es necesario ingresar tu nombre!");
+    //  }
+
+    Swal.fire({
+        title: '¡Hola!',
+        text: 'Por favor, ingresa tu nombre:',
+        input: 'text', // Campo de entrada
+        inputPlaceholder: 'Escribe tu nombre aquí',
+        confirmButtonColor: 'rgb(216,112,147)',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Guardar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const nombreCliente = result.value; // Obtener el valor ingresado
+            if (nombreCliente) {
+                localStorage.setItem("nombreCliente", nombreCliente); // Guardar en localStorage
+
+                // Actualizar el contenido en el HTML
+                if (nombreClienteHtml) {
+                    nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
+                }
+            } else {
+                Swal.fire({
+                    text: 'No ingresaste un nombre.',
+                    icon: 'warning',
+                    confirmButtonColor: 'rgb(216,112,147)'
+                });
+            }
+        }
+    });
 }
+
+
 
 let nombreClienteHtml = document.getElementById("nombre_cliente");
 console.log(nombreCliente);
@@ -141,48 +175,11 @@ contenedorCards.addEventListener("click", function (e) {
         const precio = parseInt(card.querySelector("#precio").textContent.replace("$", ""));
         carrito.push({ nombre, precio });
         //alert(`Producto agregado: ${nombre} - $${precio}`);
-        Swal.fire(`Producto agregado: ${nombre} - $${precio}`);
+        Swal.fire({text:`Producto agregado: ${nombre} - $${precio}`,
+            confirmButtonColor: 'rgb(216,112,147)'
+        });
     }
 });
-
-// Mostrar el resumen al finalizar el pedido
-// finalizarPedido.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     // Obtener lugar de retiro
-//     const lugarRetiro = localStorage.getItem("lugarRetiro") || "No especificado";
-//     resumenRetiro.textContent = `Lugar de retiro: ${lugarRetiro}`;
-
-//     // Resumir productos seleccionados
-//     resumenProductos.innerHTML = "";
-//     let total = 0;
-
-//     // Agrupar productos por nombre y cantidad
-//     const resumenCarrito = carrito.reduce((acumulador, producto) => {
-//         const { nombre, precio } = producto;
-//         if (!acumulador[nombre]) {
-//             acumulador[nombre] = { cantidad: 0, precio };
-//         }
-//         acumulador[nombre].cantidad++;
-//         return acumulador;
-
-//     }, {});
-
-//     for (const [nombre, { cantidad, precio }] of Object.entries(resumenCarrito)) { 
-//         const subtotal = cantidad * precio; total += subtotal;
-//                 const listItem = document.createElement("li");
-//                 listItem.textContent = `${producto} x ${cantidad} - $${subtotal}`;
-//                 resumenProductos.appendChild(listItem);
-//         }
-        
-
-//     // Mostrar el total
-//     resumenTotal.textContent = `Total a pagar: $${total}`;
-//     console.log(resumenTotal.textContent = `Total a pagar: $${total}`);
-    
-
-//     // Desplazar a la sección del resumen
-//     seccionResumen.scrollIntoView({ behavior: "smooth", block: "center" });
-// });
 
 // -------Mostrar el resumen al finalizar el pedido-------
 finalizarPedido.addEventListener("click", function (e) {
@@ -264,13 +261,72 @@ finalizarOrdenBtn.addEventListener("click", function () {
 });
 
 //borrar el nombre del cliente
-function borrarNombreCliente() {
+/*function borrarNombreCliente() {
     localStorage.removeItem('nombreCliente'); // Eliminar el nombre del localStorage
-    alert('Nombre del cliente borrado');
+    //alert('Nombre del cliente borrado');
     //Swal.fire('Nombre del cliente borrado');
+    Swal.fire({text:'Nombre del cliente borrado',
+        confirmButtonColor: 'rgb(216,112,147)'
+    });
     nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
     localStorage.setItem("nombreCliente", nombreCliente);
     nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
+}*/
+
+/*function borrarNombreCliente() {
+    // Eliminar el nombre del localStorage
+    localStorage.removeItem('nombreCliente');
+
+    // Mostrar SweetAlert y esperar su cierre
+    Swal.fire({
+        text: 'Nombre del cliente borrado',
+        confirmButtonColor: 'rgb(216,112,147)'
+    }).then(() => {
+        // Mostrar prompt después de que se cierre el SweetAlert
+        const nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
+        if (nombreCliente) {
+            // Guardar el nuevo nombre en localStorage
+            localStorage.setItem("nombreCliente", nombreCliente);
+
+            // Actualizar el contenido en el HTML
+            //const nombreClienteHtml = document.querySelector('.nombre-cliente'); // Ajusta el selector según tu HTML
+            if (nombreClienteHtml) {
+                nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
+            }
+        }
+    });
+}*/
+function borrarNombreCliente() {
+    localStorage.removeItem('nombreCliente'); // Eliminar el nombre del localStorage
+    //promppt con sweet alert
+    Swal.fire({
+        title: '¡Hola!',
+        text: 'Por favor, ingresa tu nombre:',
+        input: 'text', // Campo de entrada
+        inputPlaceholder: 'Escribe tu nombre aquí',
+        confirmButtonColor: 'rgb(216,112,147)',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Guardar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const nombreCliente = result.value; // Obtener el valor ingresado
+            if (nombreCliente) {
+                localStorage.setItem("nombreCliente", nombreCliente); // Guardar en localStorage
+
+                // Actualizar el contenido en el HTML
+                if (nombreClienteHtml) {
+                    nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
+                }
+            } else {
+                Swal.fire({
+                    text: 'No ingresaste un nombre.',
+                    icon: 'warning',
+                    confirmButtonColor: 'rgb(216,112,147)'
+                });
+            }
+        }
+    });
 }
 
 // agregar el evento al boton
@@ -309,6 +365,40 @@ function validarFormularioCompleto(event) {
         event.preventDefault(); // Opcional: evitar envío si hay campos vacíos
     }
 }
+
+/*function validarFormularioCompleto(event) {
+    console.log("Iniciando validación del formulario");
+
+    const formulario = document.getElementById('form_contacto');
+
+    if (!formulario) {
+        console.error("No se encontró el formulario");
+        return;
+    }
+
+    const inputs = formulario.querySelectorAll('input, textarea, select');
+    let hayErrores = false;
+
+    // Recorremos todos los campos
+    inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+            console.warn(`El campo "${input.name || input.id}" está vacío.`);
+            hayErrores = true;
+
+            // Añadimos una clase o mensaje para destacar el error
+            input.classList.add('error');
+        } else {
+            input.classList.remove('error'); // Limpiamos errores previos
+        }
+    });
+
+    if (hayErrores) {
+        console.log('Hay campos vacíos en el formulario.');
+        event.preventDefault(); // Evitar envío del formulario
+    } else {
+        console.log('Todos los campos están llenos.');
+    }
+}*/
 
 // Enlazar el evento submit (OJO REVISAR ESTA FUNCION))
 document.getElementById('form_contacto').addEventListener('submit', validarFormularioCompleto);
