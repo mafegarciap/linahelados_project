@@ -27,7 +27,7 @@ la interacción del usuario.
 ![image](https://github.com/user-attachments/assets/220e44fc-7fd2-4788-911a-fe87e2e8fa49)
 
 
-🚀 Cómo Ejecutar el Proyecto
+🚀 Cómo Ejecutar el Proyecto:
 Paso 1. Clona el repositorio:
 git clone https://github.com/tu-usuario/tu-repositorio.git
 
