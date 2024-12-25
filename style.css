@@ -388,6 +388,14 @@ footer{
     /*position: sticky;*/
 } 
 
+#titulo_contacto{
+padding-left: 20px;
+}
+
+#texto_contacto{
+    padding-left: 20px;
+}
+
 #form_contacto{
     display: flex;
     flex-direction: column;
@@ -418,17 +426,22 @@ footer{
     text-align: justify;
 }
 
+#titulo_quienes{
+    padding-left: 20px;
+    }
+    
+#texto_quienes{
+    padding-left: 20px;
+    }
+
+#main_quienes{
+    width: 100%;
+}
+
 .swal2-shown{
     font-size: small;
 }
 
-/* Estilos para pantallas de 768px o menos (tablets y móviles) */
-/*@media (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-  }*/
-  
   /* Estilos para pantallas de 480px o menos (móviles) */
   @media (max-width: 600px) {
     .nav_principal{
@@ -439,13 +452,11 @@ footer{
         gap: 30px;
     }
 
-    /* #opciones_pedido label{
-        gap: 20px;
-    } */
+   
     #opciones_pedido{
         justify-items: center;
         grid-template-columns: 1fr; /* Una sola columna */
-        /* prubeas */
+        /* pruebas */
         
     }
     #opciones_pedido label{

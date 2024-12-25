@@ -1,5 +1,3 @@
-// import Swal from 'sweetalert2'
-
 let nombreCliente = localStorage.getItem("nombreCliente");
 
 
@@ -88,13 +86,13 @@ fetch("productos.json")
         // Agregar la card al contenedor principal
         contenedorCards.appendChild(card);
     
-        // Capturar el botón "Ver más" y la descripción
+        // Capturar el botón Ver mas y la descripcion
         const botonVerMas = card.querySelector(".ver-mas");
         const descripcionParrafo = card.querySelector(".descripcion");
     
-        // Añadir el evento de clic para alternar la descripción
+        // Añadir el evento de clic para alternar la descripcion
         botonVerMas.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevenir el envío del formulario
+            event.preventDefault(); // Prevenir el envio del formulario
     
             const productoId = event.target.getAttribute("data-id"); // Obtener el id del producto
             const producto = datos.find(p => p.id == productoId); // Buscar el producto en el array
@@ -102,10 +100,10 @@ fetch("productos.json")
             // Alternar la descripción entre corta y larga
             if (descripcionParrafo.textContent === producto.descripcion_corta) {
                 descripcionParrafo.textContent = producto.descripcion_larga;
-                event.target.textContent = "Ver menos"; // Cambiar el texto del botón
+                event.target.textContent = "Ver menos"; // Cambiar el texto del boton
             } else {
                 descripcionParrafo.textContent = producto.descripcion_corta;
-                event.target.textContent = "Ver más"; // Cambiar el texto del botón
+                event.target.textContent = "Ver más"; // Cambiar el texto del boton otra vez
             }
         });
     })
@@ -117,7 +115,7 @@ fetch("productos.json")
 //contador
 let carrito=[]
 
-//capturo elementos html necesarios
+//capturo elementos html que necesito
 const opcionesPedido= document.querySelector("#opciones_pedido");
 const formularioRetiro = document.getElementById("formulario_retiro");
 const botonesAgregar = document.querySelectorAll(".agregar-producto");
@@ -130,17 +128,12 @@ const resumenProductos = document.getElementById("resumenProductos");
 const resumenTotal = document.getElementById("resumenTotalOrden");
 
 //formulario retiro
-//prevengo el enviep de las imagenes que son de tipo submit
+//prevengo el envieo de las imagenes que son de tipo submit
 
 // Guardar lugar de retiro en localStorage
 formularioRetiro.addEventListener("click", function (e) {
     e.preventDefault(); // Previene que el formulario se envíe
-    // if (e.target.name === "retiro") {
-    //     const lugar = e.target.value;
-    //     localStorage.setItem("lugarRetiro", lugar);
-    // }
-
-
+   
     if (e.target.tagName === "INPUT" && e.target.type === "image") {
         // Obtener el valor del input oculto relacionado
         const lugar = e.target.previousElementSibling.value;
@@ -149,22 +142,6 @@ formularioRetiro.addEventListener("click", function (e) {
     }
 });
 
-//cards
-// Manejar botones para agregar en las cards
-// botonesAgregar.forEach(boton => {
-//     boton.addEventListener("click", function (e) {
-//         e.preventDefault();
-//         const card = e.target.closest(".card"); // Obtener la card actual
-//         const nombre = card.querySelector(".nombreProducto").textContent;
-//         //const descripcion = card.querySelector(".descripcion").textContent;
-//         const precio = parseInt(card.querySelector(".precio").textContent);
-
-//         // Agregar producto al carrito
-//         carrito.push({ nombre, precio });
-//         alert(`Producto agregado: ${nombre} - ${precio}`);
-      
-//     });
-// });
 
 //---probando manejar el evento con el contenedor principal en vez de con los botones
 // Delegar eventos al contenedor principal
@@ -254,48 +231,10 @@ finalizarOrdenBtn.addEventListener("click", function () {
     // Deshabilitar el botón nuevamente
     finalizarOrdenBtn.disabled = true;
 
-    // Mostrar un mensaje o redirigir a otra página si es necesario
-    //alert("Gracias por tu compra. ¡Te esperamos pronto!");
-    // Redirigir a otra página
+    // Redirigir a otra pagina
     window.location.href = "colecta.html"
 });
 
-//borrar el nombre del cliente
-/*function borrarNombreCliente() {
-    localStorage.removeItem('nombreCliente'); // Eliminar el nombre del localStorage
-    //alert('Nombre del cliente borrado');
-    //Swal.fire('Nombre del cliente borrado');
-    Swal.fire({text:'Nombre del cliente borrado',
-        confirmButtonColor: 'rgb(216,112,147)'
-    });
-    nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
-    localStorage.setItem("nombreCliente", nombreCliente);
-    nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
-}*/
-
-/*function borrarNombreCliente() {
-    // Eliminar el nombre del localStorage
-    localStorage.removeItem('nombreCliente');
-
-    // Mostrar SweetAlert y esperar su cierre
-    Swal.fire({
-        text: 'Nombre del cliente borrado',
-        confirmButtonColor: 'rgb(216,112,147)'
-    }).then(() => {
-        // Mostrar prompt después de que se cierre el SweetAlert
-        const nombreCliente = prompt("¡Hola! Por favor, ingresa tu nombre:");
-        if (nombreCliente) {
-            // Guardar el nuevo nombre en localStorage
-            localStorage.setItem("nombreCliente", nombreCliente);
-
-            // Actualizar el contenido en el HTML
-            //const nombreClienteHtml = document.querySelector('.nombre-cliente'); // Ajusta el selector según tu HTML
-            if (nombreClienteHtml) {
-                nombreClienteHtml.innerHTML = `Hola <span class="nombre-rosa">${nombreCliente}</span>`;
-            }
-        }
-    });
-}*/
 function borrarNombreCliente() {
     localStorage.removeItem('nombreCliente'); // Eliminar el nombre del localStorage
     //promppt con sweet alert
@@ -366,41 +305,7 @@ function validarFormularioCompleto(event) {
     }
 }
 
-/*function validarFormularioCompleto(event) {
-    console.log("Iniciando validación del formulario");
 
-    const formulario = document.getElementById('form_contacto');
-
-    if (!formulario) {
-        console.error("No se encontró el formulario");
-        return;
-    }
-
-    const inputs = formulario.querySelectorAll('input, textarea, select');
-    let hayErrores = false;
-
-    // Recorremos todos los campos
-    inputs.forEach(input => {
-        if (input.hasAttribute('required') && !input.value.trim()) {
-            console.warn(`El campo "${input.name || input.id}" está vacío.`);
-            hayErrores = true;
-
-            // Añadimos una clase o mensaje para destacar el error
-            input.classList.add('error');
-        } else {
-            input.classList.remove('error'); // Limpiamos errores previos
-        }
-    });
-
-    if (hayErrores) {
-        console.log('Hay campos vacíos en el formulario.');
-        event.preventDefault(); // Evitar envío del formulario
-    } else {
-        console.log('Todos los campos están llenos.');
-    }
-}*/
-
-// Enlazar el evento submit (OJO REVISAR ESTA FUNCION))
 document.getElementById('form_contacto').addEventListener('submit', validarFormularioCompleto);
 
 
