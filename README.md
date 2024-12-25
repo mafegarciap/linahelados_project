@@ -28,12 +28,15 @@ la interacción del usuario.
 
 
 🚀 Cómo Ejecutar el Proyecto:
+
 Paso 1. Clona el repositorio:
 git clone https://github.com/tu-usuario/tu-repositorio.git
+
 
 Paso 2:Abre el archivo index.html en tu navegador.
 
 📩 Contacto
+
 Si quieres saber más sobre el proyecto, contáctame en:
 
 LinkedIn: https://www.linkedin.com/in/mariafernanda-garcia-p/
