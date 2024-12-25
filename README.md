@@ -17,10 +17,15 @@ la interacción del usuario.
 - HTML5: Para la estructura del contenido.
 - CSS3: Para los estilos y detalles visuales.
 - JavaScript: Para la funcionalidad interactiva del sitio.
+- Bootstrap: Para un diseño responsive y componentes estilizados.
+- SweetAlert: Para alertas personalizadas y atractivas.
 
 📸 Vista previa
+
 ![image](https://github.com/user-attachments/assets/f25dcd9e-c9fd-4c39-b13a-8df311e2141d)
 ![image](https://github.com/user-attachments/assets/2678874d-f1f7-4ee1-9b28-75bee013fda9)
+![image](https://github.com/user-attachments/assets/220e44fc-7fd2-4788-911a-fe87e2e8fa49)
+
 
 🚀 Cómo Ejecutar el Proyecto
 Paso 1. Clona el repositorio:
