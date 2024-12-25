@@ -33,7 +33,7 @@ Paso 1. Clona el repositorio:
 git clone https://github.com/tu-usuario/tu-repositorio.git
 
 
-Paso 2:Abre el archivo index.html en tu navegador.
+Paso 2: Abre el archivo index.html en tu navegador.
 
 📩 Contacto
 
