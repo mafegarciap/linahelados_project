@@ -1,7 +1,7 @@
 Lina Helados🍦
 ¡Los mejores helados de Cartagena!
 
-El sitio web de la heladería fu desarrollado con HTML, CSS y JavaScript. La intensión fue reflejar la 
+El sitio web de la heladería fue desarrollado con HTML, CSS y JavaScript. La intensión fue reflejar la 
 esencia del negocio y la identidad de la marca mediante un diseño web que respetara la gama de colores, 
 la tipografía y el estilo que representa la empresa.
 
